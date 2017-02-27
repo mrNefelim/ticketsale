@@ -16,7 +16,7 @@ Author URI: http://muzconveer.ru/
 	function ticketSale(){
 		global $wpdb;
 		$content = "<div class='ticketsale'>";
-		switch($_GET['action'])
+		switch($_GET['type'])
 		{
 			case '':
 				include(TSDIR . 'includes/event.php');
@@ -24,16 +24,20 @@ Author URI: http://muzconveer.ru/
 			case 'halls':
 				include(TSDIR . 'includes/halls.php');
 				break;
+			case 'sale':
+				include(TSDIR . 'includes/sale.php');
+				break;
 		}
 		
 		
 		$content .= '</div>';
 		###########################################
 		?>
-		<link rel='stylesheet' href='<?php echo TSURL; ?>/templates/style.css?ver=1.0' type='text/css' media='all' />
+		<link rel='stylesheet' href='<?php echo TSURL; ?>/templates/style.css?ver=1.0<?php echo rand(100000, 999999); ?>' type='text/css' media='all' />
 		<div class='ticketsalemenu'>
 			<a class="tsbtn" href="admin.php?page=ticketsale">Концерты</a>
-			<a class="tsbtn" href="admin.php?page=ticketsale&action=halls">Список залов</a>
+			<a class="tsbtn" href="admin.php?page=ticketsale&type=halls">Список залов</a>
+			<a class="tsbtn" href="admin.php?page=ticketsale&type=sale">Продажа билетов</a>
 		</div>
 		<?php
 		echo $content;

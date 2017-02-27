@@ -1,4 +1,61 @@
+body{
+    background: #fff;
+}
+.hideform{
+	display: none;
+}
+.hideform input{
+	display: block;
+	width: 100%;
+}
+.ticketsalemenu{
+	margin-top: 10px;
+	background: linear-gradient(to top, #23282d, #666);
+}
 .tsbtn{
 	display: inline-block;
+    padding: 10px 20px;
+    border-right: 1px solid #fff;
+    color: #fff;
+	outline: none;
+    text-decoration: none;
+	background-color: #666;
+	background: linear-gradient(to top, #23282d, #666);
+	transition: .4s;
+	cursor: pointer;
+}
+.tsbtn:hover,.tsbtn:focus{
+	color: #fff;
+	background: #666;
+	box-shadow: none;
+}
+.hallslist{
+	display: block;
+}
+.hall{
+	display: block;
+    margin-top: 20px;
+    border: 1px solid #666;
+    box-sizing: border-box;
+}
+.hall p{
+	display: inline-block;
 	padding: 10px;
+    box-sizing: border-box;
+}
+.hallField{
+	display: block;
+    margin-top: 20px;
+}
+.hallFieldRow{
+	display: block;
+}
+.hallFieldRow a{
+	display: inline-block;
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	padding: 3px;
+    box-sizing: border-box;
+	border: 1px solid #666;
 }
